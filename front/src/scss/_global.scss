@@ -24,14 +24,36 @@
 
 // Body Locked
 body {
+  background-color: var(--light-color);
+
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 
-  &.locked {
-    overflow: hidden;
-  }
+  // &.locked {
+  //   overflow: hidden;
+  // }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.main__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.main__body--main-page .container {
+  max-width: 1440px;
 }
 
 // Animations
