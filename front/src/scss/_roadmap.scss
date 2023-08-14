@@ -1,0 +1,162 @@
+.roadmap {
+
+  // .roadmap__inner
+
+  &__inner {}
+
+  // .roadmap__filters
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-bottom: 30px;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+  }
+
+  // .roadmap__filters-years
+
+  &__filters-years {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+
+  }
+
+  // .roadmap__filter
+
+  &__filter {
+    padding: 15px 30px;
+    border-radius: 8px;
+
+    font-weight: 700;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+
+    &.active {
+      background-color: var(--white-color);
+    }
+
+    &:hover {
+      background-color: var(--white-color);
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 359px) {
+      font-size: 14px;
+    }
+  }
+
+  // .roadmap__filters-quarters
+
+  &__filters-quarters {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  // .roadmap__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  // .roadmap__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 18px 50px;
+    border-radius: 8px;
+    background-color: var(--white-color);
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 20px;
+      padding: 20px;
+    }
+  }
+
+  // .roadmap__item-info
+
+  &__item-info {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // .roadmap__item-name
+
+  &__item-name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  // .roadmap__item-time
+
+  &__item-time {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  // .roadmap__item-result
+
+  &__item-result {}
+
+  // .roadmap__item-result-successfully
+
+  &__item-result-successfully {
+    padding: 6px 20px;
+    border-radius: 8px;
+    background-color: #C6EFCE;
+
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--green-color);
+  }
+
+  // .roadmap__item-time-text
+
+  &__item-time-text {
+    font-size: 20px;
+  }
+
+  // .roadmap__item-time-data
+
+  &__item-time-data {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

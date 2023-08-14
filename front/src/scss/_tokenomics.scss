@@ -1,0 +1,165 @@
+.tokenomics {
+
+  // .tokenomics__inner
+
+  &__inner {}
+
+  // .tokenomics__picture
+
+  &__picture {
+    margin-bottom: 50px;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .tokenomics__list
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+
+    @media (max-width: $breakpoint1200) {
+      column-gap: 10px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: flex-start;
+    }
+  }
+
+  // .tokenomics__item
+
+  &__item {
+    display: flex;
+    height: 200px;
+    max-width: 100px;
+
+    transition: max-width 0.3s linear;
+
+    &.active {
+      max-width: 690px;
+      flex: 0 1 690px;
+
+      @media (max-width: $breakpoint768) {
+        flex: 0 1 auto;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .tokenomics__info {
+        max-width: 1000px;
+        width: 100%;
+      }
+
+      .tokenomics__info-text {
+        font-size: 14px;
+
+        @media (max-width: $breakpoint1200) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  // .tokenomics__column
+
+  &__column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    text-align: center;
+    min-width: 100px;
+    border-radius: 20px;
+    background-color: #242424;
+
+    cursor: pointer;
+
+
+    @media (max-width: $breakpoint768) {
+      min-width: 60px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  // .tokenomics__item-title
+
+  &__item-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+
+  // .tokenomics__info
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    max-width: 0;
+    margin-left: 20px;
+    overflow: hidden;
+
+    transition: max-width 0.3s linear, margin 0.3s linear;
+
+    @media (max-width: $breakpoint1200) {
+      margin-left: 10px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  // .tokenomics__info-text
+
+  &__info-text {
+    padding: 9px 20px;
+    border-radius: 8px;
+    background-color: var(--white-color);
+
+    line-height: 24px;
+    font-size: 0;
+    transition: font-size 0.3s linear;
+
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
+    @media (max-width: $breakpoint768) {
+      padding: 7px 10px;
+      font-size: 12px;
+    }
+  }
+}
