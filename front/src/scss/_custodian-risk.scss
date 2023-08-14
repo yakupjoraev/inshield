@@ -1,0 +1,10 @@
+.custodian-risk {
+
+  .insurance__title {
+    flex: 0 1 72%;
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+    }
+  }
+}

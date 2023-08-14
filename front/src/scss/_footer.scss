@@ -1,4 +1,10 @@
 .footer {
+  margin-bottom: 30px;
+
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 20px;
+  }
 
   // .footer__inner
 
@@ -126,6 +132,16 @@
     img {
       width: 30px;
       height: 30px;
+
+      transition: transform 0.2s linear;
+    }
+
+    @media (min-width: 992px) {
+      &:hover {
+        img {
+          transform: translateY(-5px);
+        }
+      }
     }
 
     @media (max-width: $breakpoint992) {
@@ -167,4 +183,121 @@
   // .footer__link-descr
 
   &__link-descr {}
+}
+
+
+
+.second-footer {
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 20px;
+  }
+
+  .footer__nav {
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  // .second-footer__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--text-color);
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      border: 0;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: var(--white-color);
+    }
+  }
+
+  // .second-footer__copys
+
+  &__copys {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column-reverse;
+      row-gap: 15px;
+    }
+  }
+
+  // .second-footer__copy
+
+  &__copy {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 15px;
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 3px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      font-weight: 500;
+
+      p:nth-child(3) {
+        flex: 0 1 100%;
+        letter-spacing: 2.4px;
+      }
+    }
+  }
+
+  // .second-footer__copys-link
+
+  &__copys-link {
+    font-size: 15px;
+    color: var(--grey-color);
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+
+  // .second-footer__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+  }
+
+  // .second-footer__social
+
+  &__social {}
+
+  // .second-footer__social-link
+
+  &__social-link {
+    img {
+      width: 30px;
+      height: 30px;
+
+      transition: transform 0.2s linear;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.08);
+      }
+    }
+  }
 }

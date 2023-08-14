@@ -11,13 +11,27 @@
 
 <body class="main__body">
   <!-- Header -->
-  <!-- @@include('./html/_header.html') -->
+  @@include('./html/_header-2.html')
 
   <!-- Main Page -->
-  <main></main>
+  <main class="main">
+    <div class="container">
+      <div class="main__wrapper">
+        @@include('./html/_aside.html')
+
+        <div class="main__content">
+          @@include('./html/_insurance.html')
+          @@include('./html/_depeg-risk.html')
+          @@include('./html/_custodian-risk.html')
+          @@include('./html/_vulnerability-risk.html')
+        </div>
+
+      </div>
+    </div>
+  </main>
 
   <!-- Footer -->
-  <!-- @@include('./html/_footer.html') -->
+  @@include('./html/_footer-2.html')
 
 </body>
 
