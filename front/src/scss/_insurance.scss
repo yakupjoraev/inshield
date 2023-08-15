@@ -20,6 +20,15 @@
 
   &__top--transparent {
     background-color: transparent;
+
+    .insurance__title {
+      flex: 0 1 auto;
+      text-align: center;
+
+      @media (max-width: $breakpoint768) {
+        flex: 0 1 auto;
+      }
+    }
   }
 
   // .insurance__header
