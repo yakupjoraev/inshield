@@ -116,3 +116,47 @@ function toggleAccordion() {
 
 accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 
+
+function roadMapFilters() {
+  const container = document.querySelector('[data-roadmap-filters]');
+
+  if (!container) {
+    return null
+  }
+
+  let roadMapYears = document.querySelectorAll('[data-roadmap-year]');
+
+  const removeClass = () => {
+    roadMapYears.forEach(roadMapYear => {
+      roadMapYear.classList.remove('active')
+    })
+  }
+
+  roadMapYears.forEach(roadMapYear => {
+
+    roadMapYear.addEventListener('click', () => {
+      removeClass();
+
+      roadMapYear.classList.add('active');
+    })
+  });
+
+  let roadmapQuarters = document.querySelectorAll('[data-roadmap-quarters]');
+
+  const removeClass2 = () => {
+    roadmapQuarters.forEach(roadmapQuarter => {
+      roadmapQuarter.classList.remove('active')
+    })
+  }
+
+  roadmapQuarters.forEach(roadmapQuarter => {
+
+    roadmapQuarter.addEventListener('click', () => {
+      removeClass2();
+
+      roadmapQuarter.classList.add('active');
+    })
+  });
+}
+
+roadMapFilters();
