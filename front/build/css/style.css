@@ -1414,12 +1414,16 @@ html {
 }
 
 .staking__form {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 617px;
-          flex: 1 1 617px;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 644px;
+          flex: 0 1 644px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
@@ -1457,6 +1461,7 @@ html {
   -webkit-column-gap: 5px;
      -moz-column-gap: 5px;
           column-gap: 5px;
+  cursor: pointer;
 }
 
 .staking__axchanges-selected img {
@@ -1716,6 +1721,187 @@ html {
 .staking__results-sum-remainder {
   text-align: right;
   font-size: 14px;
+}
+
+.staking__block.active .staking__chains {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.staking__chains {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  padding: 20px;
+  border-radius: 0px 20px 20px 0px;
+  background: rgba(36, 36, 36, 0.8);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.staking__chains-currents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 50px;
+  border-radius: 10px;
+  background: rgba(36, 36, 36, 0.8);
+}
+
+.staking__chains-title {
+  margin-bottom: 22px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.staking__chains-current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.staking__chains-current.active {
+  background-color: var(--grey-color);
+}
+
+.staking__chains-current img {
+  width: 30px;
+  height: 30px;
+}
+
+.staking__chains-current:hover {
+  background-color: var(--grey-color);
+}
+
+.staking__chains-current:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.staking__chains-current-text {
+  text-align: center;
+  font-size: 12px;
+  color: var(--white-color);
+}
+
+.staking__chains-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.staking__chains-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgba(36, 36, 36, 0.8);
+}
+
+.staking__chains-value-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.staking__chains-value-name img {
+  width: 30px;
+  height: 30px;
+}
+
+.staking__chains-value-apy {
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+.staking__chains-value-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 84px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: var(--grey-color);
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+.staking__chains-value-btn:hover {
+  background-color: var(--white-color);
+  color: var(--grey-color);
 }
 
 .ai-assessor__lists {
@@ -3677,6 +3863,26 @@ html {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+  }
+
+  .staking__chains {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+    border-radius: 20px;
+  }
+
+  .staking__chains-currents {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .staking__chains-value {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 10px;
   }
 
   .ai-assessor__lists {

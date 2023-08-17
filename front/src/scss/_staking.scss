@@ -88,9 +88,11 @@
   // .staking__form
 
   &__form {
-    flex: 1 1 617px;
+    position: relative;
+    flex: 0 1 644px;
 
     display: flex;
+    justify-content: space-between;
     column-gap: 30px;
     width: 100%;
 
@@ -152,6 +154,8 @@
     display: flex;
     align-items: center;
     column-gap: 5px;
+
+    cursor: pointer;
 
     img {
       width: 30px;
@@ -390,5 +394,164 @@
   &__results-sum-remainder {
     text-align: right;
     font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+.staking__block.active .staking__chains {
+
+  transform: scale(1);
+}
+
+
+.staking__chains {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  column-gap: 20px;
+  padding: 20px;
+  border-radius: 0px 20px 20px 0px;
+  background: rgba(36, 36, 36, 0.80);
+
+  transform: scale(0);
+  transition: transform 0.2s linear;
+
+
+  @media (max-width: $breakpoint768) {
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 20px;
+  }
+}
+
+.staking__chains-currents {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  border-radius: 10px;
+  background: rgba(36, 36, 36, 0.80);
+
+  @media (max-width: $breakpoint768) {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.staking__chains-title {
+  margin-bottom: 22px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.staking__chains-current {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: transparent;
+
+  cursor: pointer;
+
+
+
+  transition: background-color 0.2s linear;
+
+  &.active {
+    background-color: var(--grey-color);
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    background-color: var(--grey-color);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.staking__chains-current-text {
+  text-align: center;
+  font-size: 12px;
+  color: var(--white-color);
+}
+
+.staking__chains-values {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.staking__chains-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgba(36, 36, 36, 0.80);
+
+  @media (max-width: $breakpoint768) {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+}
+
+.staking__chains-value-name {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-size: 20px;
+  color: var(--white-color);
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.staking__chains-value-apy {
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+.staking__chains-value-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: var(--grey-color);
+
+  font-size: 16px;
+  color: var(--white-color);
+
+  &:hover {
+    background-color: var(--white-color);
+    color: var(--grey-color);
   }
 }

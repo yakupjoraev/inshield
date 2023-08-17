@@ -182,3 +182,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  var selectElements = document.querySelectorAll("[data-axchanges-select]");
+
+  selectElements.forEach(function (element) {
+    element.addEventListener("click", function (event) {
+      var blockElement = this.closest("[data-axchanges-select-block]");
+      blockElement.classList.toggle("active");
+      event.stopPropagation(); // Остановить всплытие события, чтобы клик не попал на body
+    });
+  });
+
+  document.body.addEventListener("click", function (event) {
+    var activeBlocks = document.querySelectorAll("[data-axchanges-select-block].active");
+    activeBlocks.forEach(function (block) {
+      if (!block.contains(event.target)) {
+        block.classList.remove("active");
+      }
+    });
+  });
+});
