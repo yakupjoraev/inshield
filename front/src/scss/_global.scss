@@ -45,6 +45,12 @@ html {
   min-height: 100vh;
 }
 
+.section {
+  display: none;
+
+  animation: fade 1s linear;
+}
+
 .main__body {
   position: relative;
   display: flex;

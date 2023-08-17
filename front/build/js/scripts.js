@@ -161,4 +161,24 @@ function roadMapFilters() {
 
 roadMapFilters();
 
+document.addEventListener("DOMContentLoaded", function () {
+  const asideLinks = document.querySelectorAll(".aside__link, .aside__sublink, .footer__link");
+  const sections = document.querySelectorAll("section");
+
+  asideLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+
+        targetSection.style.display = "block";
+      }
+    });
+  });
+});
 

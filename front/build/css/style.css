@@ -130,6 +130,12 @@ html {
   min-height: 100vh;
 }
 
+.section {
+  display: none;
+  -webkit-animation: fade 1s linear;
+          animation: fade 1s linear;
+}
+
 .main__body {
   position: relative;
   display: -webkit-box;
