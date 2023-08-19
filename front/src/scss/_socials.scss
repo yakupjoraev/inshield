@@ -138,6 +138,14 @@
       .socials__link-icon span {
         color: var(--white-color);
       }
+
+      .socials__link-icon svg path {
+        fill: var(--white-color);
+      }
+
+      .socials__link-arrow img {
+        filter: invert(1);
+      }
     }
 
     @media (max-width: $breakpoint768) {
@@ -160,6 +168,11 @@
     display: flex;
     align-items: center;
     column-gap: 20px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
 
     span {
       font-size: 30px;

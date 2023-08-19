@@ -160,45 +160,77 @@ function roadMapFilters() {
 
 roadMapFilters();
 
-document.addEventListener("DOMContentLoaded", function () {
-  const asideLinks = document.querySelectorAll(".aside__link, .aside__sublink, .footer__link");
-  const sections = document.querySelectorAll("section");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const asideLinks = document.querySelectorAll(".aside__link, .aside__sublink, .footer__link");
+//   const sections = document.querySelectorAll("section");
 
-  asideLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const targetId = link.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
+//   asideLinks.forEach((link) => {
+//     link.addEventListener("click", (event) => {
+//       event.preventDefault();
+//       const targetId = link.getAttribute("href");
+//       const targetSection = document.querySelector(targetId);
 
-      if (targetSection) {
-        sections.forEach((section) => {
-          section.style.display = "none";
-        });
+//       if (targetSection) {
+//         sections.forEach((section) => {
+//           section.style.display = "none";
+//         });
 
-        targetSection.style.display = "block";
-      }
+//         targetSection.style.display = "block";
+//       }
+//     });
+//   });
+// });
+
+//плавный скролл
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const blockID = anchor.getAttribute('href').substr(1);
+
+    const targetBlock = document.getElementById(blockID);
+    const offset = 100; // Отступ в пикселях
+
+    const topOffset = targetBlock.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top: topOffset,
+      behavior: 'smooth'
     });
   });
-});
+}
 
+// $(function () { // wait for document ready
+//   // init
+//   var controller = new ScrollMagic.Controller();
 
-document.addEventListener("DOMContentLoaded", function () {
-  var selectElements = document.querySelectorAll("[data-axchanges-select]");
+//   // define movement of panels
+//   var wipeAnimation = new TimelineMax()
+//     .fromTo("#parallax1", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone })  // in from right
+//     .fromTo("#parallax2", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }) // in from top
+//     .fromTo("#parallax3", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone })
+//     .fromTo("#parallax4", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone });
+//   // in from top
 
-  selectElements.forEach(function (element) {
-    element.addEventListener("click", function (event) {
-      var blockElement = this.closest("[data-axchanges-select-block]");
-      blockElement.classList.toggle("active");
-      event.stopPropagation(); // Остановить всплытие события, чтобы клик не попал на body
-    });
-  });
+//   // create scene to pin and link animation
+//   new ScrollMagic.Scene({
+//     triggerElement: ".governance__list",
+//     triggerHook: "onLeave",
+//     duration: "400%"
+//   })
+//     .setPin(".governance__list")
+//     .setTween(wipeAnimation)
+//     .addIndicators() // add indicators (requires plugin)
+//     .addTo(controller);
 
-  document.body.addEventListener("click", function (event) {
-    var activeBlocks = document.querySelectorAll("[data-axchanges-select-block].active");
-    activeBlocks.forEach(function (block) {
-      if (!block.contains(event.target)) {
-        block.classList.remove("active");
-      }
-    });
-  });
-});
+//   new ScrollMagic.Scene({
+//     triggerElement: ".governance__list",
+//     triggerHook: "onBegin",
+//     duration: "50%",
+//     offset: 0
+//   })
+//     .setTween(textTransform)
+//     .addTo(controller);
+// });

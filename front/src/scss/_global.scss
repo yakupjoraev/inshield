@@ -35,9 +35,9 @@ body {
   font-weight: 400;
   line-height: normal;
 
-  // &.locked {
-  //   overflow: hidden;
-  // }
+  &.locked {
+    overflow: hidden;
+  }
 }
 
 body,
@@ -49,6 +49,15 @@ html {
   display: none;
 
   animation: fade 1s linear;
+}
+
+.third .section {
+  display: block;
+  margin-bottom: 150px;
+}
+
+.third .insurance {
+  margin-bottom: 150px;
 }
 
 .main__body {

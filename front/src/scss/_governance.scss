@@ -2,11 +2,18 @@
 
   // .governance__list
 
-  &__list {}
+  &__list {
+    // position: relative;
+  }
 
   // .governance__item
 
   &__item {
+    position: relative;
+
+    // position: sticky;
+    // top: 100px;
+    height: 400px;
     display: flex;
     flex-direction: column-reverse;
     border-radius: 20px;
@@ -16,6 +23,24 @@
       border-bottom: 1px solid rgba(70, 70, 70, 0.50);
     }
 
+    &:nth-child(1) {
+      z-index: 4;
+    }
+
+    &:nth-child(2) {
+      z-index: 3;
+      margin-top: -300px;
+    }
+
+    &:nth-child(3) {
+      z-index: 2;
+      margin-top: -300px;
+    }
+
+    &:nth-child(4) {
+      z-index: 1;
+      margin-top: -300px;
+    }
   }
 
   // .governance__item-content
@@ -24,9 +49,7 @@
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s linear;
+    padding: 30px;
 
     @media (max-width: $breakpoint1200) {
       flex-direction: column;
@@ -63,17 +86,11 @@
     column-gap: 10px;
     padding: 30px;
 
-    cursor: pointer;
-
     img {
       width: 30px;
       height: 30px;
     }
 
-    &.active~.governance__item-content {
-      max-height: 800px !important;
-      padding: 30px;
-    }
   }
 
   // .governance__item-label

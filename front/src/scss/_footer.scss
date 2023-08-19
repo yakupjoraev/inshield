@@ -57,6 +57,17 @@
       top: 60px;
     }
 
+    @media (max-width: 359px) {
+      row-gap: 20px;
+
+      .footer__list {
+        row-gap: 20px;
+      }
+
+      .footer__link {
+        font-size: 20px;
+      }
+    }
 
 
     .menu__item-item--black {

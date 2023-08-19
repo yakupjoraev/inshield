@@ -289,3 +289,37 @@
     color: white;
   }
 }
+
+
+
+
+
+
+.third {
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .aside {
+    top: 100px;
+  }
+
+  .footer__nav {
+    @media (max-width: $breakpoint992) {
+      position: fixed;
+      z-index: 100;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      top: 51px;
+    }
+  }
+
+  .second-footer .footer__nav {
+    display: none;
+  }
+}
