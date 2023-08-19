@@ -290,6 +290,10 @@
     @media (max-width: $breakpoint768) {
       font-size: 18px;
     }
+
+    @media (max-width: $breakpoint480) {
+      font-size: 14px;
+    }
   }
 
   // .staking__axchange-bottom

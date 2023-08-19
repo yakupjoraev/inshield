@@ -203,35 +203,21 @@ for (let anchor of anchors) {
   });
 }
 
-// $(function () { // wait for document ready
-//   // init
-//   var controller = new ScrollMagic.Controller();
-
-//   // define movement of panels
-//   var wipeAnimation = new TimelineMax()
-//     .fromTo("#parallax1", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone })  // in from right
-//     .fromTo("#parallax2", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone }) // in from top
-//     .fromTo("#parallax3", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone })
-//     .fromTo("#parallax4", 1, { y: "100%" }, { y: "0%", ease: Linear.easeNone });
-//   // in from top
-
-//   // create scene to pin and link animation
-//   new ScrollMagic.Scene({
-//     triggerElement: ".governance__list",
-//     triggerHook: "onLeave",
-//     duration: "400%"
-//   })
-//     .setPin(".governance__list")
-//     .setTween(wipeAnimation)
-//     .addIndicators() // add indicators (requires plugin)
-//     .addTo(controller);
-
-//   new ScrollMagic.Scene({
-//     triggerElement: ".governance__list",
-//     triggerHook: "onBegin",
-//     duration: "50%",
-//     offset: 0
-//   })
-//     .setTween(textTransform)
-//     .addTo(controller);
+// var swiper = new Swiper(".mySwiper", {
+//   grabCursor: true,
+//   // effect: "creative",
+//   spaceBetween: 30,
+//   mousewheel: true,
+//   direction: "vertical",
+//   slidesPerView: 1,
+//   // creativeEffect: {
+//   //   prev: {
+//   //     shadow: true,
+//   //     translate: [0, 0, -400],
+//   //   },
+//   //   next: {
+//   //     translate: ["100%", 0, 0],
+//   //   },
+//   // },
 // });
+
