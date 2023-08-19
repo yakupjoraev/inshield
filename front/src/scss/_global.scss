@@ -54,10 +54,20 @@ html {
 .third .section {
   display: block;
   margin-bottom: 150px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 60px;
+  }
+
 }
 
 .third .insurance {
   margin-bottom: 150px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 60px;
+  }
+
 }
 
 .main__body {

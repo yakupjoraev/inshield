@@ -133,7 +133,13 @@
 
   // .roadmap__item-result
 
-  &__item-result {}
+  &__item-result {
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
 
   // .roadmap__item-result-successfully
 

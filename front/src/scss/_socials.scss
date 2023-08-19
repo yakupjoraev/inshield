@@ -222,6 +222,11 @@
 
   &__link-arrow {
 
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
     @media (max-width: $breakpoint768) {
       display: none;
     }

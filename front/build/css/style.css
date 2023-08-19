@@ -1084,6 +1084,11 @@ html {
   color: var(--text-color);
 }
 
+.depeg-risk__events-item img {
+  width: 50px;
+  height: 50px;
+}
+
 .depeg-risk__events-descr {
   max-width: 430px;
   min-height: 54px;
@@ -2426,6 +2431,11 @@ html {
   cursor: pointer;
 }
 
+.tokenomics__column img {
+  width: 50px;
+  height: 50px;
+}
+
 .tokenomics__item-title {
   font-size: 10px;
   text-transform: uppercase;
@@ -2835,6 +2845,11 @@ html {
           column-gap: 20px;
 }
 
+.roadmap__item-result img {
+  width: 20px;
+  height: 20px;
+}
+
 .roadmap__item-result-successfully {
   padding: 6px 20px;
   border-radius: 8px;
@@ -3013,6 +3028,11 @@ html {
   height: 30px;
 }
 
+.socials__link-arrow img {
+  width: 30px;
+  height: 30px;
+}
+
 .footer {
   margin-bottom: 30px;
 }
@@ -3136,6 +3156,11 @@ html {
      -moz-column-gap: 5px;
           column-gap: 5px;
   font-size: 15px;
+}
+
+.second-footer__copy img {
+  width: 15px;
+  height: 15px;
 }
 
 .second-footer__copys-link {
@@ -3387,6 +3412,14 @@ html {
 }
 
 @media (max-width: 991.98px) {
+  .third .section {
+    margin-bottom: 60px;
+  }
+
+  .third .insurance {
+    margin-bottom: 60px;
+  }
+
   .main__wrapper {
     grid-template-columns: repeat(1, 1fr);
     padding: 30px 0 30px;
