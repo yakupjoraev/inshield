@@ -486,6 +486,8 @@ html {
 }
 
 .menu__item-link--arrow img {
+  width: 14px;
+  height: 14px;
   -webkit-transition: -webkit-transform 0.2s linear;
   transition: -webkit-transform 0.2s linear;
   -o-transition: transform 0.2s linear;

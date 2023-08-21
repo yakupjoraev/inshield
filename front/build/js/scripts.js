@@ -203,21 +203,4 @@ for (let anchor of anchors) {
   });
 }
 
-// var swiper = new Swiper(".mySwiper", {
-//   grabCursor: true,
-//   // effect: "creative",
-//   spaceBetween: 30,
-//   mousewheel: true,
-//   direction: "vertical",
-//   slidesPerView: 1,
-//   // creativeEffect: {
-//   //   prev: {
-//   //     shadow: true,
-//   //     translate: [0, 0, -400],
-//   //   },
-//   //   next: {
-//   //     translate: ["100%", 0, 0],
-//   //   },
-//   // },
-// });
 
